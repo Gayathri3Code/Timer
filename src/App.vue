@@ -1,15 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/hourglass.png" height="300" width="360">
+    <HelloWorld msg="Welcome to Timer"/>
+    <Timer />
+  </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Timer from './components/Timer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Timer
   }
 }
 </script>
@@ -20,7 +25,25 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #f7f9fa;
+  background-color: rgb(26, 7, 45);
+  background-size: cover;
+}
+.logo {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 600px) {
+  #app {
+    padding: 10px;
+  }
+  
+  .logo {
+    max-width: 100%; 
+    height: auto;
+  }
 }
 </style>
